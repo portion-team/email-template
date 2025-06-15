@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Subscription is Expiring Soon</title>
+    <title>Your Delivery is Confirmed</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -22,7 +22,7 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
         .header {
-            background-color: #F39C12;
+            background-color: #2ECC71;
             color: white;
             padding: 30px 20px;
             text-align: center;
@@ -34,21 +34,32 @@
         .content {
             padding: 30px 20px;
         }
-        .expiry-box {
-            background-color: #FEF5E7;
-            border-left: 4px solid #F39C12;
+        .delivery-box {
+            background-color: #EAFAF1;
+            border-left: 4px solid #2ECC71;
             border-radius: 6px;
             padding: 15px;
             margin: 20px 0;
-            text-align: center;
         }
-        .expiry-box h2 {
+        .delivery-box h2 {
             margin-top: 0;
-            color: #F39C12;
+            color: #2ECC71;
+        }
+        .delivery-details {
+            margin-top: 15px;
+        }
+        .delivery-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .delivery-row:last-child {
+            border-bottom: none;
         }
         .cta-button {
             display: inline-block;
-            background-color: #F39C12;
+            background-color: #2ECC71;
             color: white;
             text-decoration: none;
             padding: 12px 25px;
@@ -69,89 +80,104 @@
         .social-links a {
             display: inline-block;
             margin: 0 5px;
-            color: #F39C12;
+            color: #2ECC71;
             text-decoration: none;
         }
         .divider {
             border-top: 1px solid #eee;
             margin: 20px 0;
         }
-        .benefits {
+        .meal-list {
             margin: 20px 0;
         }
-        .benefit-item {
+        .meal-item {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
         }
-        .benefit-icon {
+        .meal-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .meal-icon {
             width: 40px;
             height: 40px;
-            background-color: #FEF5E7;
+            background-color: #EAFAF1;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 15px;
             font-size: 20px;
-            color: #F39C12;
+            color: #2ECC71;
         }
-        .benefit-text {
+        .meal-text {
             flex: 1;
+        }
+        .meal-text h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .meal-text p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #666;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Your Subscription is Expiring Soon</h1>
+            <h1>Your Delivery is Confirmed</h1>
         </div>
         <div class="content">
             <p>Hello {{name}},</p>
-            <p>We hope you've been enjoying your healthy meals from Portion!</p>
+            <p>Great news! Your Portion meal delivery has been confirmed and is scheduled for delivery.</p>
             
-            <div class="expiry-box">
-                <h2>Your Subscription Expires Soon</h2>
-                <p>Your <strong>{{planName}}</strong> subscription will expire on <strong>{{expiryDate}}</strong>.</p>
-                <p>To continue enjoying your meals without interruption, please renew your subscription.</p>
+            <div class="delivery-box">
+                <h2>Delivery Details</h2>
+                <div class="delivery-details">
+                    <div class="delivery-row">
+                        <span>Delivery Date:</span>
+                        <span>{{deliveryDate}}</span>
+                    </div>
+                    <div class="delivery-row">
+                        <span>Delivery Time:</span>
+                        <span>{{deliveryTime}}</span>
+                    </div>
+                    <div class="delivery-row">
+                        <span>Delivery Address:</span>
+                        <span>{{deliveryAddress}}</span>
+                    </div>
+                    <div class="delivery-row">
+                        <span>Order Number:</span>
+                        <span>{{orderNumber}}</span>
+                    </div>
+                </div>
             </div>
             
-            <p>By renewing your subscription, you'll continue to enjoy:</p>
-            
-            <div class="benefits">
-                <div class="benefit-item">
-                    <div class="benefit-icon">✓</div>
-                    <div class="benefit-text">
-                        <strong>Nutritionally balanced meals</strong> designed by expert nutritionists
+            <h3>Your Meals</h3>
+            <div class="meal-list">
+                {{#meals}}
+                <div class="meal-item">
+                    <div class="meal-icon">🍽️</div>
+                    <div class="meal-text">
+                        <h3>{{mealName}}</h3>
+                        <p>{{mealDescription}}</p>
                     </div>
                 </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">✓</div>
-                    <div class="benefit-text">
-                        <strong>Convenient delivery</strong> right to your doorstep
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">✓</div>
-                    <div class="benefit-text">
-                        <strong>Flexible meal plans</strong> that fit your lifestyle
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">✓</div>
-                    <div class="benefit-text">
-                        <strong>Time-saving</strong> meal solutions for busy days
-                    </div>
-                </div>
+                {{/meals}}
             </div>
             
             <div style="text-align: center;">
-                <a href="{{renewalLink}}" class="cta-button">Renew My Subscription</a>
+                <a href="{{trackingLink}}" class="cta-button">Track Your Delivery</a>
             </div>
             
             <div class="divider"></div>
             
-            <p>If you have any questions about your subscription or need assistance with renewal, please don't hesitate to contact our customer service team.</p>
+            <p>If you have any questions about your delivery or need to make changes, please contact our customer service team as soon as possible.</p>
             
             <p>Thank you for choosing Portion for your healthy meal needs!</p>
             <p>The Portion Team</p>
