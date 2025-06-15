@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #3A7D44;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .content {
+            padding: 30px 20px;
+        }
+        .receipt-details {
+            background-color: #f5f9f6;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .receipt-details h3 {
+            margin-top: 0;
+            color: #3A7D44;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #3A7D44;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        .app-links {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .app-links a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .social-links {
+            margin-top: 15px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 5px;
+            color: #3A7D44;
+            text-decoration: none;
+        }
+        .divider {
+            border-top: 1px solid #eee;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        table th {
+            background-color: #f5f9f6;
+        }
+        .amount {
+            font-weight: bold;
+            font-size: 18px;
+            color: #3A7D44;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Payment Receipt</h1>
+        </div>
+        <div class="content">
+            <p>Hello {{name}},</p>
+            <p>Thank you for your payment. This email confirms that your payment has been processed successfully.</p>
+            
+            <div class="receipt-details">
+                <h3>Payment Details</h3>
+                <table>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <td>{{transactionId}}</td>
+                    </tr>
+                    <tr>
+                        <th>Date</th>
+                        <td>{{paymentDate}}</td>
+                    </tr>
+                    <tr>
+                        <th>Package</th>
+                        <td>{{packageName}}</td>
+                    </tr>
+                    <tr>
+                        <th>Payment Method</th>
+                        <td>{{paymentMethod}}</td>
+                    </tr>
+                    <tr>
+                        <th>Amount</th>
+                        <td class="amount">{{amount}}</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <p>You can view your complete payment history and receipts in the app.</p>
+            
+            <div style="text-align: center;">
+                <a href="{{receiptLink}}" class="cta-button">View Full Receipt</a>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <p>If you have any questions about this payment or your subscription, please contact our customer support team.</p>
+            
+            <p>Thank you for choosing Portion!</p>
+            <p>The Portion Team</p>
+        </div>
+        <div class="footer">
+            <p>Portion - Healthy meals delivered to your doorstep</p>
+            <p>Kuwait City, Kuwait</p>
+            <div class="social-links">
+                <a href="https://instagram.com/portionapp">Instagram</a> | 
+                <a href="https://facebook.com/portionapp">Facebook</a> | 
+                <a href="https://twitter.com/portionapp">Twitter</a>
+            </div>
+            <p><a href="{{unsubscribeLink}}">Unsubscribe</a> | <a href="{{arabicLink}}">View in Arabic</a></p>
+        </div>
+    </div>
+</body>
+</html> 
