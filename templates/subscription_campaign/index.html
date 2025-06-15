@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" style="margin: 0; padding: 0;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Portion Subscription Update</title>
+  </head>
+  <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #ffffff;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td align="center" style="padding: 20px;">
+          <table width="480" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; background-color: #ffffff;">
+            <tr>
+              <td style="padding: 30px 20px;">
+                <h2 style="color: #1a1a1a;">Your Portion Journey Update</h2>
+                <p style="font-size: 15px; color: #333333;">Hello {{name}},</p>
+                <p style="font-size: 15px; color: #333333;">
+                  Thank you for being a valued Portion subscriber! We're excited to share some updates about your subscription and upcoming meals.
+                </p>
+                
+                <!-- Subscription Status -->
+                <div style="background-color: #f4f4f4; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                  <h3 style="color: #1a1a1a; margin-top: 0;">Your Subscription Status</h3>
+                  <table width="100%" cellspacing="0" cellpadding="5" border="0">
+                    <tr>
+                      <td style="font-size: 14px;"><strong>Plan:</strong></td>
+                      <td style="font-size: 14px;">{{planName}}</td>
+                    </tr>
+                    <tr>
+                      <td style="font-size: 14px;"><strong>Next Delivery:</strong></td>
+                      <td style="font-size: 14px;">{{nextDeliveryDate}}</td>
+                    </tr>
+                    <tr>
+                      <td style="font-size: 14px;"><strong>Delivery Time:</strong></td>
+                      <td style="font-size: 14px;">{{deliveryTime}}</td>
+                    </tr>
+                    <tr>
+                      <td style="font-size: 14px;"><strong>Renewal Date:</strong></td>
+                      <td style="font-size: 14px;">{{renewalDate}}</td>
+                    </tr>
+                  </table>
+                </div>
+                
+                <!-- Upcoming Menu Preview -->
+                <h3 style="color: #1a1a1a;">Your Upcoming Meals</h3>
+                <p style="font-size: 15px; color: #333333;">
+                  Here's a preview of some delicious meals coming your way:
+                </p>
+                
+                <div style="margin: 15px 0;">
+                  <div style="background-color: #f9f9f9; padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 4px solid #ffcb05;">
+                    <p style="margin: 0; font-size: 15px; font-weight: bold;">{{meal1Name}}</p>
+                    <p style="margin: 5px 0 0; font-size: 13px; color: #555;">{{meal1Description}}</p>
+                    <p style="margin: 5px 0 0; font-size: 12px; color: #777;">Calories: {{meal1Calories}} | Protein: {{meal1Protein}}g | Carbs: {{meal1Carbs}}g</p>
+                  </div>
+                  
+                  <div style="background-color: #f9f9f9; padding: 12px; border-radius: 8px; margin-bottom: 10px; border-left: 4px solid #ffcb05;">
+                    <p style="margin: 0; font-size: 15px; font-weight: bold;">{{meal2Name}}</p>
+                    <p style="margin: 5px 0 0; font-size: 13px; color: #555;">{{meal2Description}}</p>
+                    <p style="margin: 5px 0 0; font-size: 12px; color: #777;">Calories: {{meal2Calories}} | Protein: {{meal2Protein}}g | Carbs: {{meal2Carbs}}g</p>
+                  </div>
+                </div>
+                
+                <div style="margin: 25px 0; text-align: center;">
+                  <a href="{{viewMealsLink}}" style="display: inline-block; background-color: #1f2b3e; color: white; font-weight: bold; text-decoration: none; padding: 12px 20px; border-radius: 6px; font-size: 15px;">View All Upcoming Meals</a>
+                </div>
+                
+                <!-- Referral Program -->
+                <div style="background-color: #ffcb05; padding: 15px; border-radius: 8px; margin: 25px 0; text-align: center;">
+                  <h3 style="color: #1a1a1a; margin-top: 0;">Refer a Friend, Get {{referralReward}}!</h3>
+                  <p style="font-size: 14px; color: #1a1a1a;">Share your referral code with friends and family:</p>
+                  <p style="font-size: 18px; color: #1a1a1a; font-weight: bold; letter-spacing: 2px; margin: 10px 0;">{{referralCode}}</p>
+                  <p style="font-size: 12px; color: #1a1a1a; margin-bottom: 0;">Your friends get {{friendDiscount}}% off their first order!</p>
+                </div>
+                
+                <p style="font-size: 15px; color: #333333;">
+                  Remember, you can always customize your meals, skip a delivery, or make changes to your subscription through the Portion app.
+                </p>
+                
+                <p style="font-size: 14px; color: #333333;">
+                  Enjoy your meals!<br />
+                  The Portion Team
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="background-color: #1f2b3e; padding: 20px;">
+                <img src="https://raw.githubusercontent.com/portion-team/email-template/main/shared/images/logo.png" alt="Portion Logo" width="100" style="margin-bottom: 15px;" />
+                <br />
+                <a href="{{appStoreLink}}" style="display: inline-block; background-color: #ffcb05; color: #000; font-weight: bold; text-decoration: none; padding: 10px 15px; margin: 5px; border-radius: 6px;">Download on the App Store</a>
+                <a href="{{playStoreLink}}" style="display: inline-block; background-color: #ffcb05; color: #000; font-weight: bold; text-decoration: none; padding: 10px 15px; margin: 5px; border-radius: 6px;">Get it on Google Play</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding: 15px; font-size: 12px; color: #888;">
+                To update your email notifications, <a href="{{unsubscribeLink}}" style="color: #007bff; text-decoration: none;">click here</a>.<br />
+                تفضل الإشتراك توصيلك بالعربية <a href="{{arabicLink}}" style="color: #007bff; text-decoration: none;">هنا اضغط</a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html> 
