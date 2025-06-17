@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscription Expiring - Portion</title>
+    <title>Reset Your Password - Portion</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -32,7 +32,7 @@
         }
         .title {
             font-size: 28px;
-            color: #e74c3c;
+            color: #2c3e50;
             margin-bottom: 20px;
         }
         .content {
@@ -40,22 +40,9 @@
             line-height: 1.8;
             margin-bottom: 30px;
         }
-        .expiry-notice {
+        .security-notice {
             background-color: #fff3cd;
             border: 1px solid #ffeaa7;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        .expiry-date {
-            font-size: 24px;
-            font-weight: bold;
-            color: #e74c3c;
-            margin: 10px 0;
-        }
-        .benefits-list {
-            background-color: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
             margin: 20px 0;
@@ -72,18 +59,17 @@
             text-align: center;
             margin: 20px 0;
         }
-        .secondary-button {
-            display: inline-block;
-            background-color: transparent;
-            color: #FFD700;
-            border: 2px solid #FFD700;
-            padding: 13px 28px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 16px;
+        .reset-code {
+            background-color: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
             text-align: center;
-            margin: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            color: #2c3e50;
+            margin: 20px 0;
         }
         .footer {
             text-align: center;
@@ -99,43 +85,41 @@
     <div class="container">
         <div class="header">
             <div class="logo">Portion</div>
-            <h1 class="title">Don't Let Your Journey End! ⏰</h1>
+            <h1 class="title">Reset Your Password 🔐</h1>
         </div>
         
         <div class="content">
             <p>Hi {{firstName}},</p>
             
-            <p>We hope you've been enjoying your healthy meals with Portion! We wanted to remind you that your current subscription is expiring soon.</p>
+            <p>We received a request to reset your password for your Portion account. If you made this request, please use the button below to reset your password.</p>
             
-            <div class="expiry-notice">
-                <h3>Your subscription expires on:</h3>
-                <div class="expiry-date">{{expiryDate}}</div>
-                <p>That's only <strong>{{daysRemaining}} days</strong> away!</p>
+            {{#if resetCode}}
+            <p>Alternatively, you can use this reset code:</p>
+            <div class="reset-code">{{resetCode}}</div>
+            {{/if}}
+            
+            <div style="text-align: center;">
+                <a href="{{resetUrl}}" class="cta-button">Reset My Password</a>
             </div>
             
-            <p>Don't let your healthy eating journey come to an end. Renew your subscription today and continue enjoying:</p>
-            
-            <div class="benefits-list">
+            <div class="security-notice">
+                <h4>🛡️ Security Notice:</h4>
                 <ul>
-                    <li>🥗 Fresh, nutritious meals delivered to your door</li>
-                    <li>📊 Personalized meal plans based on your goals</li>
-                    <li>👨‍⚕️ Expert nutritionist support</li>
-                    <li>📱 Easy meal tracking and progress monitoring</li>
-                    <li>💪 Continued progress towards your health goals</li>
+                    <li>This reset link will expire in <strong>{{expiryHours}} hours</strong></li>
+                    <li>If you didn't request this reset, please ignore this email</li>
+                    <li>For security, never share this link with anyone</li>
+                    <li>If you're concerned about your account security, contact our support team</li>
                 </ul>
             </div>
             
-            <p>Renew now and get <strong>{{renewalDiscount}}% off</strong> your next subscription!</p>
+            <p>If the button above doesn't work, you can copy and paste this link into your browser:</p>
+            <p style="word-break: break-all; color: #666; font-size: 14px;">{{resetUrl}}</p>
             
-            <div style="text-align: center;">
-                <a href="{{renewalUrl}}" class="cta-button">Renew My Subscription</a>
-                <br>
-                <a href="{{browsePackagesUrl}}" class="secondary-button">Browse Other Packages</a>
-            </div>
+            <p>If you didn't request a password reset, you can safely ignore this email. Your password will remain unchanged.</p>
         </div>
         
         <div class="footer">
-            <p>Questions about renewal? Contact us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a></p>
+            <p>Need help? Contact us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a></p>
             <p>© 2024 Portion App. All rights reserved.</p>
         </div>
     </div>

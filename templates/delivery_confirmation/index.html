@@ -3,195 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Delivery is Confirmed</title>
+    <title>Delivery Confirmation - Portion</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        .container {
             max-width: 600px;
             margin: 0 auto;
-            background: #ffffff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .header {
-            background-color: #2ECC71;
-            color: white;
-            padding: 30px 20px;
             text-align: center;
+            margin-bottom: 30px;
         }
-        .header h1 {
-            margin: 0;
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        .title {
             font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 20px;
         }
         .content {
-            padding: 30px 20px;
-        }
-        .delivery-box {
-            background-color: #EAFAF1;
-            border-left: 4px solid #2ECC71;
-            border-radius: 6px;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        .delivery-box h2 {
-            margin-top: 0;
-            color: #2ECC71;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 30px;
         }
         .delivery-details {
-            margin-top: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
         }
-        .delivery-row {
+        .detail-row {
             display: flex;
             justify-content: space-between;
-            padding: 8px 0;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
             border-bottom: 1px solid #eee;
         }
-        .delivery-row:last-child {
+        .detail-row:last-child {
             border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .status-badge {
+            background-color: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
         }
         .cta-button {
             display: inline-block;
-            background-color: #2ECC71;
+            background-color: #FFD700;
             color: white;
+            padding: 15px 30px;
             text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            margin: 20px 0;
+            border-radius: 25px;
             font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            margin: 20px 0;
         }
         .footer {
-            background-color: #f5f5f5;
-            padding: 20px;
             text-align: center;
-            font-size: 12px;
-            color: #666;
-        }
-        .social-links {
-            margin-top: 15px;
-        }
-        .social-links a {
-            display: inline-block;
-            margin: 0 5px;
-            color: #2ECC71;
-            text-decoration: none;
-        }
-        .divider {
+            margin-top: 40px;
+            padding-top: 20px;
             border-top: 1px solid #eee;
-            margin: 20px 0;
-        }
-        .meal-list {
-            margin: 20px 0;
-        }
-        .meal-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        .meal-item:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-        .meal-icon {
-            width: 40px;
-            height: 40px;
-            background-color: #EAFAF1;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-size: 20px;
-            color: #2ECC71;
-        }
-        .meal-text {
-            flex: 1;
-        }
-        .meal-text h3 {
-            margin: 0;
-            font-size: 16px;
-        }
-        .meal-text p {
-            margin: 5px 0 0;
-            font-size: 14px;
             color: #666;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Your Delivery is Confirmed</h1>
+            <div class="logo">Portion</div>
+            <h1 class="title">Your Meals Are On The Way! 🚚</h1>
         </div>
+        
         <div class="content">
-            <p>Hello {{name}},</p>
-            <p>Great news! Your Portion meal delivery has been confirmed and is scheduled for delivery.</p>
+            <p>Hi {{firstName}},</p>
             
-            <div class="delivery-box">
-                <h2>Delivery Details</h2>
-                <div class="delivery-details">
-                    <div class="delivery-row">
-                        <span>Delivery Date:</span>
-                        <span>{{deliveryDate}}</span>
-                    </div>
-                    <div class="delivery-row">
-                        <span>Delivery Time:</span>
-                        <span>{{deliveryTime}}</span>
-                    </div>
-                    <div class="delivery-row">
-                        <span>Delivery Address:</span>
-                        <span>{{deliveryAddress}}</span>
-                    </div>
-                    <div class="delivery-row">
-                        <span>Order Number:</span>
-                        <span>{{orderNumber}}</span>
-                    </div>
+            <p>Great news! Your healthy meals have been prepared and are now on their way to you.</p>
+            
+            <div class="delivery-details">
+                <h3>Delivery Information:</h3>
+                <div class="detail-row">
+                    <span><strong>Status:</strong></span>
+                    <span><span class="status-badge">{{deliveryStatus}}</span></span>
+                </div>
+                <div class="detail-row">
+                    <span><strong>Delivery Date:</strong></span>
+                    <span>{{deliveryDate}}</span>
+                </div>
+                <div class="detail-row">
+                    <span><strong>Delivery Time:</strong></span>
+                    <span>{{deliveryTime}}</span>
+                </div>
+                <div class="detail-row">
+                    <span><strong>Delivery Address:</strong></span>
+                    <span>{{deliveryAddress}}</span>
+                </div>
+                {{#if trackingNumber}}
+                <div class="detail-row">
+                    <span><strong>Tracking Number:</strong></span>
+                    <span>{{trackingNumber}}</span>
+                </div>
+                {{/if}}
+                <div class="detail-row">
+                    <span><strong>Driver Contact:</strong></span>
+                    <span>{{driverPhone}}</span>
                 </div>
             </div>
             
-            <h3>Your Meals</h3>
-            <div class="meal-list">
-                {{#meals}}
-                <div class="meal-item">
-                    <div class="meal-icon">🍽️</div>
-                    <div class="meal-text">
-                        <h3>{{mealName}}</h3>
-                        <p>{{mealDescription}}</p>
-                    </div>
-                </div>
-                {{/meals}}
-            </div>
+            <p><strong>What's in your delivery:</strong></p>
+            <ul>
+                {{#each mealItems}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            
+            <p>Please ensure someone is available to receive your delivery. If you need to make any changes, please contact us as soon as possible.</p>
             
             <div style="text-align: center;">
-                <a href="{{trackingLink}}" class="cta-button">Track Your Delivery</a>
+                <a href="{{trackingUrl}}" class="cta-button">Track My Delivery</a>
             </div>
-            
-            <div class="divider"></div>
-            
-            <p>If you have any questions about your delivery or need to make changes, please contact our customer service team as soon as possible.</p>
-            
-            <p>Thank you for choosing Portion for your healthy meal needs!</p>
-            <p>The Portion Team</p>
         </div>
+        
         <div class="footer">
-            <p>Portion - Healthy meals delivered to your doorstep</p>
-            <p>Kuwait City, Kuwait</p>
-            <div class="social-links">
-                <a href="https://instagram.com/portionapp">Instagram</a> | 
-                <a href="https://facebook.com/portionapp">Facebook</a> | 
-                <a href="https://twitter.com/portionapp">Twitter</a>
-            </div>
-            <p><a href="{{unsubscribeLink}}">Unsubscribe</a> | <a href="{{arabicLink}}">View in Arabic</a></p>
+            <p>Questions about your delivery? Contact us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a></p>
+            <p>© 2024 Portion App. All rights reserved.</p>
         </div>
     </div>
 </body>
-</html> 
+</html>

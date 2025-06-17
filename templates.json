@@ -1,0 +1,185 @@
+{
+  "templates": [
+    {
+      "id": "welcome",
+      "name": "Welcome Email",
+      "description": "Welcome new users to Portion",
+      "category": "onboarding",
+      "version": "1.0.0",
+      "htmlFile": "welcome.html",
+      "variables": [
+        "firstName",
+        "appUrl",
+        "supportEmail"
+      ],
+      "active": true,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "subscription_confirmation",
+      "name": "Subscription Confirmation",
+      "description": "Confirm user subscription details",
+      "category": "transactional",
+      "version": "1.0.0",
+      "htmlFile": "subscription_confirmation.html",
+      "variables": [
+        "firstName",
+        "packageName",
+        "packageDuration",
+        "deliveryDays",
+        "startDate",
+        "totalAmount",
+        "firstDeliveryDate",
+        "appUrl",
+        "supportEmail"
+      ],
+      "active": true,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "payment_receipt",
+      "name": "Payment Receipt",
+      "description": "Payment confirmation and receipt",
+      "category": "transactional",
+      "version": "1.0.0",
+      "htmlFile": "payment_receipt.html",
+      "variables": [
+        "firstName",
+        "transactionId",
+        "paymentDate",
+        "paymentMethod",
+        "packageName",
+        "subtotal",
+        "vatAmount",
+        "vatRate",
+        "totalAmount",
+        "firstDeliveryDate",
+        "appUrl",
+        "supportEmail"
+      ],
+      "active": true,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "delivery_confirmation",
+      "name": "Delivery Confirmation",
+      "description": "Notify users about meal delivery",
+      "category": "operational",
+      "version": "1.0.0",
+      "htmlFile": "delivery_confirmation.html",
+      "variables": [
+        "firstName",
+        "deliveryStatus",
+        "deliveryDate",
+        "deliveryTime",
+        "deliveryAddress",
+        "trackingNumber",
+        "driverPhone",
+        "mealItems",
+        "trackingUrl",
+        "supportEmail"
+      ],
+      "active": true,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "subscription_expiring",
+      "name": "Subscription Expiring",
+      "description": "Remind users about expiring subscription",
+      "category": "retention",
+      "version": "1.0.0",
+      "htmlFile": "subscription_expiring.html",
+      "variables": [
+        "firstName",
+        "expiryDate",
+        "daysRemaining",
+        "renewalDiscount",
+        "renewalUrl",
+        "browsePackagesUrl",
+        "supportEmail"
+      ],
+      "active": true,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "subscription_expired",
+      "name": "Subscription Expired",
+      "description": "Win back users with expired subscriptions",
+      "category": "retention",
+      "version": "1.0.0",
+      "htmlFile": "subscription_expired.html",
+      "variables": [
+        "firstName",
+        "expiryDate",
+        "comebackDiscount",
+        "restartUrl",
+        "supportEmail"
+      ],
+      "active": true,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "password_reset",
+      "name": "Password Reset",
+      "description": "Help users reset their password",
+      "category": "security",
+      "version": "1.0.0",
+      "htmlFile": "password_reset.html",
+      "variables": [
+        "firstName",
+        "resetCode",
+        "resetUrl",
+        "expiryHours",
+        "supportEmail"
+      ],
+      "active": true,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "acquisition_campaign",
+      "name": "Acquisition Campaign",
+      "description": "Marketing campaign to acquire new customers",
+      "category": "marketing",
+      "version": "1.0.0",
+      "htmlFile": "acquisition_campaign.html",
+      "variables": [
+        "discountPercentage",
+        "customerCount",
+        "signupUrl",
+        "supportEmail"
+      ],
+      "active": true,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "retention_campaign",
+      "name": "Retention Campaign",
+      "description": "Motivate existing customers to continue",
+      "category": "marketing",
+      "version": "1.0.0",
+      "htmlFile": "retention_campaign.html",
+      "variables": [
+        "firstName",
+        "daysWithPortion",
+        "mealsDelivered",
+        "caloriesSaved",
+        "streakDays",
+        "specialOffer",
+        "offerDiscount",
+        "appUrl",
+        "supportEmail"
+      ],
+      "active": true,
+      "createdAt": "2024-01-01T00:00:00Z",
+      "updatedAt": "2024-01-01T00:00:00Z"
+    }
+  ]
+}

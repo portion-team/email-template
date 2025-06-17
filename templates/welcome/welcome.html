@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscription Confirmed - Portion</title>
+    <title>Welcome to Portion</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +30,7 @@
             color: #FFD700;
             margin-bottom: 10px;
         }
-        .title {
+        .welcome-title {
             font-size: 28px;
             color: #2c3e50;
             margin-bottom: 20px;
@@ -39,24 +39,6 @@
             font-size: 16px;
             line-height: 1.8;
             margin-bottom: 30px;
-        }
-        .subscription-details {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .detail-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        .detail-row:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
         }
         .cta-button {
             display: inline-block;
@@ -84,47 +66,32 @@
     <div class="container">
         <div class="header">
             <div class="logo">Portion</div>
-            <h1 class="title">Subscription Confirmed! ✅</h1>
+            <h1 class="welcome-title">Welcome to Your Healthy Journey! 🎉</h1>
         </div>
         
         <div class="content">
             <p>Hi {{firstName}},</p>
             
-            <p>Great news! Your subscription has been confirmed and you're all set to start your healthy journey with Portion.</p>
+            <p>Welcome to Portion! We're thrilled to have you join our community of health-conscious individuals who are committed to living their best lives.</p>
             
-            <div class="subscription-details">
-                <h3>Your Subscription Details:</h3>
-                <div class="detail-row">
-                    <span><strong>Package:</strong></span>
-                    <span>{{packageName}}</span>
-                </div>
-                <div class="detail-row">
-                    <span><strong>Duration:</strong></span>
-                    <span>{{packageDuration}}</span>
-                </div>
-                <div class="detail-row">
-                    <span><strong>Delivery Days:</strong></span>
-                    <span>{{deliveryDays}}</span>
-                </div>
-                <div class="detail-row">
-                    <span><strong>Start Date:</strong></span>
-                    <span>{{startDate}}</span>
-                </div>
-                <div class="detail-row">
-                    <span><strong>Total Amount:</strong></span>
-                    <span>{{totalAmount}} BHD</span>
-                </div>
-            </div>
+            <p>Your journey to better health starts now, and we're here to support you every step of the way with:</p>
             
-            <p>Your first delivery will arrive on <strong>{{firstDeliveryDate}}</strong>. We'll send you a notification when your meals are on the way!</p>
+            <ul>
+                <li>🥗 Personalized meal plans tailored to your goals</li>
+                <li>📱 Easy-to-use mobile app for tracking your progress</li>
+                <li>👨‍⚕️ Expert nutritionist support and guidance</li>
+                <li>🚚 Fresh, healthy meals delivered to your door</li>
+            </ul>
+            
+            <p>Ready to get started? Complete your profile and choose your first meal plan!</p>
             
             <div style="text-align: center;">
-                <a href="{{appUrl}}" class="cta-button">View My Subscription</a>
+                <a href="{{appUrl}}" class="cta-button">Get Started Now</a>
             </div>
         </div>
         
         <div class="footer">
-            <p>Questions? Contact us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a></p>
+            <p>Need help? Contact us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a></p>
             <p>© 2024 Portion App. All rights reserved.</p>
         </div>
     </div>

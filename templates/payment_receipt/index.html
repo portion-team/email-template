@@ -3,162 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Receipt</title>
+    <title>Payment Receipt - Portion</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        .container {
             max-width: 600px;
             margin: 0 auto;
-            background: #ffffff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .header {
-            background-color: #3A7D44;
-            color: white;
-            padding: 30px 20px;
             text-align: center;
+            margin-bottom: 30px;
         }
-        .header h1 {
-            margin: 0;
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        .title {
             font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 20px;
         }
         .content {
-            padding: 30px 20px;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 30px;
         }
         .receipt-details {
-            background-color: #f5f9f6;
-            border-radius: 6px;
-            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
             margin: 20px 0;
         }
-        .receipt-details h3 {
-            margin-top: 0;
-            color: #3A7D44;
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .detail-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .total-row {
+            font-weight: bold;
+            font-size: 18px;
+            color: #2c3e50;
         }
         .cta-button {
             display: inline-block;
-            background-color: #3A7D44;
+            background-color: #FFD700;
             color: white;
+            padding: 15px 30px;
             text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            margin: 20px 0;
+            border-radius: 25px;
             font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+            margin: 20px 0;
         }
         .footer {
-            background-color: #f5f5f5;
-            padding: 20px;
             text-align: center;
-            font-size: 12px;
-            color: #666;
-        }
-        .app-links {
-            margin: 20px 0;
-            text-align: center;
-        }
-        .app-links a {
-            display: inline-block;
-            margin: 0 10px;
-        }
-        .social-links {
-            margin-top: 15px;
-        }
-        .social-links a {
-            display: inline-block;
-            margin: 0 5px;
-            color: #3A7D44;
-            text-decoration: none;
-        }
-        .divider {
+            margin-top: 40px;
+            padding-top: 20px;
             border-top: 1px solid #eee;
-            margin: 20px 0;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table th, table td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
-        table th {
-            background-color: #f5f9f6;
-        }
-        .amount {
-            font-weight: bold;
-            font-size: 18px;
-            color: #3A7D44;
+            color: #666;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Payment Receipt</h1>
+            <div class="logo">Portion</div>
+            <h1 class="title">Payment Receipt 🧾</h1>
         </div>
+        
         <div class="content">
-            <p>Hello {{name}},</p>
-            <p>Thank you for your payment. This email confirms that your payment has been processed successfully.</p>
+            <p>Hi {{firstName}},</p>
+            
+            <p>Thank you for your payment! Here's your receipt for your recent transaction.</p>
             
             <div class="receipt-details">
-                <h3>Payment Details</h3>
-                <table>
-                    <tr>
-                        <th>Transaction ID</th>
-                        <td>{{transactionId}}</td>
-                    </tr>
-                    <tr>
-                        <th>Date</th>
-                        <td>{{paymentDate}}</td>
-                    </tr>
-                    <tr>
-                        <th>Package</th>
-                        <td>{{packageName}}</td>
-                    </tr>
-                    <tr>
-                        <th>Payment Method</th>
-                        <td>{{paymentMethod}}</td>
-                    </tr>
-                    <tr>
-                        <th>Amount</th>
-                        <td class="amount">{{amount}}</td>
-                    </tr>
-                </table>
+                <h3>Payment Details:</h3>
+                <div class="detail-row">
+                    <span><strong>Transaction ID:</strong></span>
+                    <span>{{transactionId}}</span>
+                </div>
+                <div class="detail-row">
+                    <span><strong>Date:</strong></span>
+                    <span>{{paymentDate}}</span>
+                </div>
+                <div class="detail-row">
+                    <span><strong>Payment Method:</strong></span>
+                    <span>{{paymentMethod}}</span>
+                </div>
+                <div class="detail-row">
+                    <span><strong>Package:</strong></span>
+                    <span>{{packageName}}</span>
+                </div>
+                <div class="detail-row">
+                    <span><strong>Subtotal:</strong></span>
+                    <span>{{subtotal}} BHD</span>
+                </div>
+                {{#if vatAmount}}
+                <div class="detail-row">
+                    <span><strong>VAT ({{vatRate}}%):</strong></span>
+                    <span>{{vatAmount}} BHD</span>
+                </div>
+                {{/if}}
+                <div class="detail-row total-row">
+                    <span><strong>Total Paid:</strong></span>
+                    <span>{{totalAmount}} BHD</span>
+                </div>
             </div>
             
-            <p>You can view your complete payment history and receipts in the app.</p>
+            <p>Your subscription is now active and your first delivery will arrive on <strong>{{firstDeliveryDate}}</strong>.</p>
             
             <div style="text-align: center;">
-                <a href="{{receiptLink}}" class="cta-button">View Full Receipt</a>
+                <a href="{{appUrl}}" class="cta-button">View My Account</a>
             </div>
-            
-            <div class="divider"></div>
-            
-            <p>If you have any questions about this payment or your subscription, please contact our customer support team.</p>
-            
-            <p>Thank you for choosing Portion!</p>
-            <p>The Portion Team</p>
         </div>
+        
         <div class="footer">
-            <p>Portion - Healthy meals delivered to your doorstep</p>
-            <p>Kuwait City, Kuwait</p>
-            <div class="social-links">
-                <a href="https://instagram.com/portionapp">Instagram</a> | 
-                <a href="https://facebook.com/portionapp">Facebook</a> | 
-                <a href="https://twitter.com/portionapp">Twitter</a>
-            </div>
-            <p><a href="{{unsubscribeLink}}">Unsubscribe</a> | <a href="{{arabicLink}}">View in Arabic</a></p>
+            <p>Keep this receipt for your records. Need help? Contact us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a></p>
+            <p>© 2024 Portion App. All rights reserved.</p>
         </div>
     </div>
 </body>
-</html> 
+</html>

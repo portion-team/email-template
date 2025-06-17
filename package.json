@@ -1,0 +1,24 @@
+{
+  "name": "portion-email-templates",
+  "version": "1.0.0",
+  "description": "Email templates for Portion app",
+  "main": "upload_to_dynamodb.js",
+  "scripts": {
+    "upload": "node upload_to_dynamodb.js",
+    "validate": "node validate_templates.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1490.0"
+  },
+  "devDependencies": {
+    "handlebars": "^4.7.8"
+  },
+  "keywords": [
+    "email",
+    "templates",
+    "portion",
+    "dynamodb"
+  ],
+  "author": "Portion Team",
+  "license": "MIT"
+}
