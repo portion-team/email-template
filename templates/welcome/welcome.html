@@ -3,97 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Portion</title>
+    <title>Portion - Delicious Healthy Meals</title>
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fa;
-        }
-        .container {
-            background-color: white;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            color: #FFD700;
-            margin-bottom: 10px;
-        }
-        .welcome-title {
-            font-size: 28px;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        .content {
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #FFD700;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 16px;
-            text-align: center;
-            margin: 20px 0;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #666;
-            font-size: 14px;
+        /* Reset styles */
+        body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+        table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+        img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
+        
+        /* Main styles */
+        .email-container { width: 100%; max-width: 393px; margin: 0 auto; background-color: #ffffff; font-family: 'Roboto', Arial, sans-serif; }
+        .header { background-color: #253748; color: #ffffff; padding: 15px 24px; }
+        .content { padding: 24px; color: #253748; }
+        .footer { background-color: #253748; padding: 15px 24px; text-align: center; }
+        .footer-links { color: #ffffff; font-size: 11px; line-height: 15.4px; }
+        .footer-links a { color: #ffffff; text-decoration: underline; }
+        
+        .title { font-size: 19px; font-weight: 700; line-height: 26.6px; margin-bottom: 20px; }
+        .subtitle { font-size: 16px; font-weight: 700; line-height: 22.4px; margin-bottom: 10px; }
+        .body-text { font-size: 13px; font-weight: 400; line-height: 18.2px; margin-bottom: 15px; }
+        
+        .feature-list { margin: 20px 0; }
+        .feature-item { margin-bottom: 5px; }
+        
+        .testimonial-section { background-color: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 10px; }
+        .testimonial { background-color: #ffffff; padding: 15px; margin: 10px 0; border-radius: 18px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .testimonial-text { font-size: 13px; line-height: 18.2px; margin-bottom: 10px; }
+        .testimonial-author { font-weight: 600; color: #253748; }
+        
+        .cta-section { text-align: center; margin: 30px 0; }
+        .app-badges { text-align: center; padding: 15px 0; }
+        .badge-row { display: inline-block; margin: 5px; }
+        
+        .meal-showcase { text-align: center; margin: 20px 0; }
+        .meal-image-placeholder { width: 100%; height: 200px; background-color: #f0f0f0; border-radius: 10px; margin: 10px 0; display: flex; align-items: center; justify-content: center; color: #666; }
+        
+        /* Responsive */
+        @media screen and (max-width: 480px) {
+            .email-container { width: 100% !important; }
+            .content { padding: 16px !important; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">Portion</div>
-            <h1 class="welcome-title">Welcome to Your Healthy Journey! 🎉</h1>
+
+<div class="email-container">
+    <div class="content">
+        <h1 class="title">Delicious food is a few steps away</h1>
+        
+        <div class="body-text">
+            Hello {{firstName}}<br>
+            We're happy you downloaded our app! 😃<br><br>
+            Here are some key features to help you take a step forward:
         </div>
         
-        <div class="content">
-            <p>Hi {{firstName}},</p>
+        <div class="feature-list">
+            <div class="feature-item body-text">📱 Choose your meals</div>
+            <div class="feature-item body-text">🍏 Get nutritional consultation</div>
+            <div class="feature-item body-text">🚚 Free & fast delivery</div>
+        </div>
+        
+        <div style="text-align: center; margin: 20px 0;">
+            <img src="https://raw.githubusercontent.com/portion-team/portion-email-templates/main/shared/images/Rectangle%208.png" alt="Portion App Interface" style="width: 100%; max-width: 320px; height: auto; border-radius: 10px;">
+        </div>
+        
+        <div class="subtitle">Did you hear what people say about us?</div>
+        <div class="body-text">It's heart warming 🤗</div>
+        
+        <!-- Testimonials Section with Image and Overlaid Messages -->
+        <div style="position: relative; text-align: center; margin: 20px 0;">
+            <img src="https://raw.githubusercontent.com/portion-team/portion-email-templates/main/shared/images/girl.png" alt="Happy customer with testimonials" style="width: 100%; max-width: 320px; height: auto; border-radius: 10px;">
             
-            <p>Welcome to Portion! We're thrilled to have you join our community of health-conscious individuals who are committed to living their best lives.</p>
+            <!-- Testimonial overlays positioned on the image -->
+            <div style="position: absolute; top: 10%; left: 5%; background-color: white; padding: 10px; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 180px; font-size: 11px; line-height: 14px;">
+                <div style="margin-bottom: 5px;">"You guys are by far the best meal plan I have ever registered with."</div>
+                <div style="font-weight: 600; color: #253748;">- Mohamed</div>
+            </div>
             
-            <p>Your journey to better health starts now, and we're here to support you every step of the way with:</p>
+            <div style="position: absolute; top: 35%; right: 5%; background-color: white; padding: 10px; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 180px; font-size: 11px; line-height: 14px;">
+                <div style="margin-bottom: 5px;">"It's been two weeks now and I've got to say that the meals are delicious and each dish tastes better than the other one 🤩"</div>
+                <div style="font-weight: 600; color: #253748;">- Khalid</div>
+            </div>
             
-            <ul>
-                <li>🥗 Personalized meal plans tailored to your goals</li>
-                <li>📱 Easy-to-use mobile app for tracking your progress</li>
-                <li>👨‍⚕️ Expert nutritionist support and guidance</li>
-                <li>🚚 Fresh, healthy meals delivered to your door</li>
-            </ul>
+            <div style="position: absolute; bottom: 25%; left: 8%; background-color: white; padding: 10px; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 160px; font-size: 11px; line-height: 14px;">
+                <div style="margin-bottom: 5px;">"I especially want to say really great customer service and help constantly!"</div>
+                <div style="font-weight: 600; color: #253748;">- Dania</div>
+            </div>
             
-            <p>Ready to get started? Complete your profile and choose your first meal plan!</p>
-            
-            <div style="text-align: center;">
-                <a href="{{appUrl}}" class="cta-button">Get Started Now</a>
+            <div style="position: absolute; bottom: 5%; right: 8%; background-color: white; padding: 10px; border-radius: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 140px; font-size: 11px; line-height: 14px;">
+                <div style="margin-bottom: 5px;">"Everything is just perfect... The best in Bahrain!"</div>
+                <div style="font-weight: 600; color: #253748;">- Alya</div>
             </div>
         </div>
         
-        <div class="footer">
-            <p>Need help? Contact us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a></p>
-            <p>© 2024 Portion App. All rights reserved.</p>
+        <div class="cta-section">
+            <div class="subtitle">Wanna get delicious nutritious meals delivered to you everyday?</div>
+            <div class="body-text">
+                Subscribe and start your health journey 😃<br><br>
+                Lots of love,<br>
+                Portion Team 💙
+            </div>
         </div>
     </div>
+    
+    <div class="footer">
+        <div class="app-badges">
+            <div style="margin-bottom: 10px;">
+                <img src="https://raw.githubusercontent.com/portion-team/portion-email-templates/main/shared/images/logo.png" alt="Portion Logo" style="height: 20px;">
+            </div>
+            <div class="badge-row">
+                <img src="https://raw.githubusercontent.com/portion-team/portion-email-templates/main/shared/images/apple.png" alt="App Store" style="height: 28px; margin: 0 5px;">
+                <img src="https://raw.githubusercontent.com/portion-team/portion-email-templates/main/shared/images/google.png" alt="Google Play" style="height: 28px; margin: 0 5px;">
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="footer-links" style="text-align: center;">
+            To update your email notifications, <a href="#">click here</a>.<br>
+            تفضل الإيميلات توصلك بالعربي؟ <a href="#">اضغط هنا</a>.
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

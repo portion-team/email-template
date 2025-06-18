@@ -3,18 +3,16 @@
     {
       "id": "welcome",
       "name": "Welcome Email",
-      "description": "Welcome new users to Portion",
+      "description": "Welcome new users to Portion with testimonials and meal showcase",
       "category": "onboarding",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "htmlFile": "welcome.html",
       "variables": [
-        "firstName",
-        "appUrl",
-        "supportEmail"
+        "firstName"
       ],
       "active": true,
       "createdAt": "2024-01-01T00:00:00Z",
-      "updatedAt": "2024-01-01T00:00:00Z"
+      "updatedAt": "2024-01-15T00:00:00Z"
     },
     {
       "id": "subscription_confirmation",
@@ -180,6 +178,21 @@
       "active": true,
       "createdAt": "2024-01-01T00:00:00Z",
       "updatedAt": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "promotional_campaign",
+      "name": "Promotional Campaign",
+      "description": "Promotional email for users who haven't subscribed yet",
+      "category": "marketing",
+      "version": "1.0.0",
+      "htmlFile": "promotional_campaign.html",
+      "variables": [
+        "firstName",
+        "discountPercentage"
+      ],
+      "active": true,
+      "createdAt": "2024-01-15T00:00:00Z",
+      "updatedAt": "2024-01-15T00:00:00Z"
     }
   ]
 }
