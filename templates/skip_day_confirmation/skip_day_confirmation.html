@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Skip Day Confirmation</title>
+  <style>
+    body { font-family: Arial, sans-serif; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 24px; }
+    h1 { color: #2f855a; }
+    .footer { margin-top: 40px; font-size: 12px; color: #777; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hi {{firstName}},</h1>
+
+    <p>Your delivery on <strong>{{skipDate}}</strong> has been successfully <strong>skipped</strong>.</p>
+    <p>Reason provided: <em>{{reason}}</em></p>
+
+    <p>You can manage skips for subscription <strong>{{subscriptionId}}</strong> anytime in the app.</p>
+
+    <p>If this was a mistake just un-skip before the kitchen cut-off.</p>
+
+    <p class="footer">
+      Need help? Contact us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.
+    </p>
+  </div>
+</body>
+</html> 

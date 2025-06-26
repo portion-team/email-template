@@ -193,6 +193,45 @@
       "active": true,
       "createdAt": "2024-01-15T00:00:00Z",
       "updatedAt": "2024-01-15T00:00:00Z"
+    },
+    {
+      "id": "skip_day_confirmation",
+      "name": "Skip Day Confirmation",
+      "description": "Confirm a successful skip-day action to the subscriber",
+      "category": "transactional",
+      "version": "1.0.0",
+      "htmlFile": "skip_day_confirmation.html",
+      "variables": [
+        "firstName",
+        "skipDate",
+        "reason",
+        "subscriptionId",
+        "supportEmail"
+      ],
+      "active": true,
+      "createdAt": "2024-01-15T00:00:00Z",
+      "updatedAt": "2024-01-15T00:00:00Z"
+    },
+    {
+      "id": "addon_purchase",
+      "name": "Add-on Purchase Confirmation",
+      "description": "Receipt/confirmation for meal add-on purchases",
+      "category": "transactional",
+      "version": "1.0.0",
+      "htmlFile": "addon_purchase.html",
+      "variables": [
+        "firstName",
+        "transactionId",
+        "paymentDate",
+        "paymentMethod",
+        "addonsList",
+        "totalAmount",
+        "appUrl",
+        "supportEmail"
+      ],
+      "active": true,
+      "createdAt": "2024-01-15T00:00:00Z",
+      "updatedAt": "2024-01-15T00:00:00Z"
     }
   ]
 }

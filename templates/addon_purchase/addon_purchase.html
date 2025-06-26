@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Add-on Purchase Confirmation</title>
+  <style>
+    body { font-family: Arial, sans-serif; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 24px; }
+    h1 { color: #2b6cb0; }
+    .footer { margin-top: 40px; font-size: 12px; color: #777; }
+    .addons { margin: 16px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Thanks for your add-on order, {{firstName}}!</h1>
+
+    <p>We've received payment <strong>#{{transactionId}}</strong> on {{paymentDate}} via {{paymentMethod}}.</p>
+
+    <div class="addons">
+      <h3>Your selected add-ons:</h3>
+      <p>{{addonsList}}</p>
+    </div>
+
+    <p><strong>Total paid: {{totalAmount}} BHD</strong></p>
+
+    <p>You can view or manage your deliveries anytime in the Portion app.</p>
+
+    <p class="footer">
+      Need help? Contact us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.
+    </p>
+  </div>
+</body>
+</html> 
