@@ -119,12 +119,12 @@
                     <span><strong>Subtotal:</strong></span>
                     <span>{{subtotal}} BHD</span>
                 </div>
-                {{#if vatAmount}}
+                {{#vatAmount}}
                 <div class="detail-row">
                     <span><strong>VAT ({{vatRate}}%):</strong></span>
                     <span>{{vatAmount}} BHD</span>
                 </div>
-                {{/if}}
+                {{/vatAmount}}
                 <div class="detail-row total-row">
                     <span><strong>Total Paid:</strong></span>
                     <span>{{totalAmount}} BHD</span>
