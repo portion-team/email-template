@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Portion – Subscription Confirmed</title>
+    <title>Your Portion Subscription – Confirmed</title>
     <!--[if mso]>
     <noscript>
         <xml>
@@ -23,34 +23,62 @@
                 <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;background-color:#ffffff;border-radius:8px;">
                     <!-- Hero / Title -->
                     <tr>
-                        <td style="padding:0 40px 30px 40px;">
-                            <h1 style="color:#253748;font-size:24px;font-weight:700;margin:0;">Welcome to Portion! 🤗</h1>
+                        <td style="padding:0 40px 30px 40px;text-align:center;">
+                            <h1 style="color:#253748;font-size:24px;font-weight:700;margin:0;">Your subscription was successful 🙌</h1>
                         </td>
                     </tr>
                     <!-- Greeting -->
                     <tr>
-                        <td style="padding:0 40px 20px 40px;">
-                            <p style="font-size:16px;color:#253748;margin:0 0 10px 0;line-height:1.5;">Hello <strong>{{firstName}}</strong>,</p>
-                            <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;">We're glad you're starting your journey with us! 🎉</p>
+                        <td style="padding:0 40px 15px 40px;">
+                            <p style="font-size:16px;color:#253748;margin:0 0 15px 0;line-height:1.5;">Hello <strong>{{firstName}}</strong>,</p>
+                            <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;">Thank you for your subscription!</p>
                         </td>
                     </tr>
-                    <!-- Key things heading -->
+                    <!-- Details box -->
                     <tr>
-                        <td style="padding:10px 40px 0 40px;">
-                            <h2 style="color:#253748;font-size:18px;font-weight:700;margin:0;">Here are a few things you should know</h2>
-                        </td>
-                    </tr>
-                    <!-- Yellow feature image section -->
-                    <tr>
-                        <td style="padding:0 0 30px 0;">
-                            <img src="https://raw.githubusercontent.com/portion-team/email-template/main/shared/images/Rectangle 2.png" alt="What you can do on the app" style="display:block;width:100%;max-width:600px;height:auto;">
-                        </td>
-                    </tr>
-                    <!-- Chat reach -->
-                    <tr>
-                        <td style="padding:0 40px 20px 40px;">
-                            <h3 style="font-size:18px;color:#253748;margin:0 0 10px 0;">You can always reach to us to chat 💬</h3>
-                            <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;">Just go to the Profile page and click on "Help Center"</p>
+                        <td style="padding:15px 40px 25px 40px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f5f6f7;border-radius:8px;">
+                                <!-- Heading -->
+                                <tr>
+                                    <td style="padding:20px 25px 10px 25px;font-size:16px;color:#253748;font-weight:700;">Subscription Details</td>
+                                </tr>
+                                <!-- Subscription ID (optional) -->
+                                <tr>
+                                    <td style="padding:12px 25px;font-size:14px;color:#253748;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:160px;font-weight:600;">Subscription #:</span> {{subscriptionId}}
+                                    </td>
+                                </tr>
+                                <!-- Package / Plan -->
+                                <tr>
+                                    <td style="padding:12px 25px;font-size:14px;color:#253748;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:160px;font-weight:600;">Package:</span> {{planName}}
+                                    </td>
+                                </tr>
+                                <!-- Delivery address -->
+                                <tr>
+                                    <td style="padding:12px 25px;font-size:14px;color:#253748;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:160px;font-weight:600;">Delivery address:</span> {{deliveryAddress}}
+                                    </td>
+                                </tr>
+                                <!-- Delivery period -->
+                                <tr>
+                                    <td style="padding:12px 25px;font-size:14px;color:#253748;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:160px;font-weight:600;">Delivery period:</span> {{deliveryTime}}
+                                    </td>
+                                </tr>
+                                <!-- Payment type -->
+                                <tr>
+                                    <td style="padding:12px 25px;font-size:14px;color:#253748;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:160px;font-weight:600;">Payment type:</span> {{paymentMethod}}
+                                    </td>
+                                </tr>
+                                <!-- Total payment -->
+                                <tr>
+                                    <td style="padding:12px 25px 25px 25px;font-size:16px;color:#253748;font-weight:700;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:160px;">Total payment:</span> {{totalAmount}} BHD
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                     <!-- Signature -->
