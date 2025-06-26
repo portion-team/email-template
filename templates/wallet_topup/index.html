@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Portion – Subscription Confirmed</title>
+    <title>Payment Successful - Portion</title>
     <!--[if mso]>
     <noscript>
         <xml>
@@ -23,49 +23,51 @@
                 <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;background-color:#ffffff;border-radius:8px;">
                     <!-- Hero / Title -->
                     <tr>
-                        <td style="padding:0 40px 30px 40px;">
-                            <h1 style="color:#253748;font-size:24px;font-weight:700;margin:0;">Welcome to Portion! 🤗</h1>
+                        <td style="padding:40px 40px 20px 40px;">
+                            <h1 style="color:#253748;font-size:24px;font-weight:700;margin:0;">Your payment was successful 🙌</h1>
                         </td>
                     </tr>
-                    <!-- Greeting -->
+                    <!-- Greeting & intro -->
                     <tr>
                         <td style="padding:0 40px 20px 40px;">
-                            <p style="font-size:16px;color:#253748;margin:0 0 10px 0;line-height:1.5;">Hello <strong>{{firstName}}</strong>,</p>
-                            <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;">We're glad you're starting your journey with us! 🎉</p>
+                            <p style="font-size:16px;color:#253748;margin:0 0 15px 0;line-height:1.5;">Hello <strong>{{firstName}}</strong>,</p>
+                            <p style="font-size:16px;color:#253748;margin:0 0 15px 0;line-height:1.5;">Thank you for making a payment on Portion App.</p>
+                            <p style="font-size:16px;color:#253748;font-weight:700;margin:0;line-height:1.5;">You have a total of <span style="color:#000;">{{walletTotal}} BHD</span> in your Wallet 💰</p>
                         </td>
                     </tr>
-                    <!-- Key things heading -->
+                    <!-- Wallet Top-up Details heading -->
                     <tr>
-                        <td style="padding:10px 40px 0 40px;">
-                            <h2 style="color:#253748;font-size:18px;font-weight:700;margin:0;">Here are a few things you should know</h2>
+                        <td style="padding:20px 40px 0 40px;">
+                            <h2 style="color:#253748;font-size:18px;font-weight:700;margin:0;">Wallet Top-up Details</h2>
                         </td>
                     </tr>
-                    <!-- Yellow feature image section -->
+                    <!-- Details box -->
                     <tr>
-                        <td style="padding:0 0 30px 0;">
-                            <img src="https://raw.githubusercontent.com/portion-team/email-template/main/shared/images/Rectangle 2.png" alt="What you can do on the app" style="display:block;width:100%;max-width:600px;height:auto;">
-                        </td>
-                    </tr>
-                    <!-- Chat reach -->
-                    <tr>
-                        <td style="padding:0 40px 20px 40px;">
-                            <h3 style="font-size:18px;color:#253748;margin:0 0 10px 0;">You can always reach to us to chat 💬</h3>
-                            <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;">Just go to the Profile page and click on "Help Center"</p>
+                        <td style="padding:15px 40px 30px 40px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f5f6f7;border-radius:8px;">
+                                <!-- Transaction row -->
+                                <tr>
+                                    <td style="padding:20px 25px;font-size:14px;color:#253748;font-weight:600;border-bottom:1px solid #e0e0e0;">Transaction # {{transactionNumber}}</td>
+                                </tr>
+                                <!-- Payment Type -->
+                                <tr>
+                                    <td style="padding:15px 25px;font-size:14px;color:#253748;">
+                                        <span style="display:inline-block;width:120px;font-weight:600;">Payment type:</span> {{paymentType}}
+                                    </td>
+                                </tr>
+                                <!-- Total payment -->
+                                <tr>
+                                    <td style="padding:15px 25px 25px 25px;font-size:14px;color:#253748;">
+                                        <span style="display:inline-block;width:120px;font-weight:600;">Total payment:</span> {{topupAmount}} BHD
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                     <!-- Signature -->
                     <tr>
                         <td style="padding:0 40px 40px 40px;">
-                            <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;">Excited to see you reach your goals! 😁</p>
-                            <div style="height:15px;"></div>
                             <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;">Lots of love,<br><strong>Portion Team 💙</strong></p>
-                        </td>
-                    </tr>
-                    <!-- Contact Us prompt -->
-                    <tr>
-                        <td style="padding:0 40px 30px 40px;text-align:center;">
-                            <p style="font-size:16px;color:#253748;margin:0 0 15px 0;">More questions? Chat with our team</p>
-                            <a href="{{contactLink}}" style="display:inline-block;background-color:#ffcb05;color:#253748;font-weight:600;text-decoration:none;padding:12px 30px;border-radius:25px;font-size:16px;">💬 Contact Us</a>
                         </td>
                     </tr>
                     <!-- Dark footer -->
@@ -82,7 +84,7 @@
                             </a>
                         </td>
                     </tr>
-                    <!-- Email prefs -->
+                    <!-- Email Preferences -->
                     <tr>
                         <td style="padding:20px 40px 40px 40px;text-align:center;font-size:12px;color:#888888;">
                             To update your email notifications, <a href="{{unsubscribeLink}}" style="color:#007bff;text-decoration:none;">click here</a>.<br>
@@ -94,4 +96,4 @@
         </tr>
     </table>
 </body>
-</html>
+</html> 

@@ -3,145 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Receipt - Portion</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f9fa;
-        }
-        .container {
-            background-color: white;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            color: #FFD700;
-            margin-bottom: 10px;
-        }
-        .title {
-            font-size: 28px;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        .content {
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-        .receipt-details {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        .detail-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        .detail-row:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        .total-row {
-            font-weight: bold;
-            font-size: 18px;
-            color: #2c3e50;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #FFD700;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 16px;
-            text-align: center;
-            margin: 20px 0;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #666;
-            font-size: 14px;
-        }
-    </style>
+    <title>Payment Receipt – Portion</title>
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">Portion</div>
-            <h1 class="title">Payment Receipt 🧾</h1>
-        </div>
-        
-        <div class="content">
-            <p>Hi {{firstName}},</p>
-            
-            <p>Thank you for your payment! Here's your receipt for your recent transaction.</p>
-            
-            <div class="receipt-details">
-                <h3>Payment Details:</h3>
-                <div class="detail-row">
-                    <span><strong>Transaction ID:</strong></span>
-                    <span>{{transactionId}}</span>
-                </div>
-                <div class="detail-row">
-                    <span><strong>Date:</strong></span>
-                    <span>{{paymentDate}}</span>
-                </div>
-                <div class="detail-row">
-                    <span><strong>Payment Method:</strong></span>
-                    <span>{{paymentMethod}}</span>
-                </div>
-                <div class="detail-row">
-                    <span><strong>Package:</strong></span>
-                    <span>{{packageName}}</span>
-                </div>
-                <div class="detail-row">
-                    <span><strong>Subtotal:</strong></span>
-                    <span>{{subtotal}} BHD</span>
-                </div>
-                {{#vatAmount}}
-                <div class="detail-row">
-                    <span><strong>VAT ({{vatRate}}%):</strong></span>
-                    <span>{{vatAmount}} BHD</span>
-                </div>
-                {{/vatAmount}}
-                <div class="detail-row total-row">
-                    <span><strong>Total Paid:</strong></span>
-                    <span>{{totalAmount}} BHD</span>
-                </div>
-            </div>
-            
-            <p>Your subscription is now active and your first delivery will arrive on <strong>{{firstDeliveryDate}}</strong>.</p>
-            
-            <div style="text-align: center;">
-                <a href="{{appUrl}}" class="cta-button">View My Account</a>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>Keep this receipt for your records. Need help? Contact us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a></p>
-            <p>© 2024 Portion App. All rights reserved.</p>
-        </div>
-    </div>
+<body style="margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background-color:#ffffff;">
+    <!-- Wrapper -->
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff;">
+        <tr>
+            <td align="center" style="padding:30px 0;">
+                <!-- Container -->
+                <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;background-color:#ffffff;border-radius:8px;">
+                    <!-- Hero / Title -->
+                    <tr>
+                        <td style="padding:0 40px 30px 40px;">
+                            <h1 style="color:#253748;font-size:24px;font-weight:700;margin:0;">Your payment was successful 🙌</h1>
+                        </td>
+                    </tr>
+                    <!-- Greeting -->
+                    <tr>
+                        <td style="padding:0 40px 20px 40px;">
+                            <p style="font-size:16px;color:#253748;margin:0 0 15px 0;line-height:1.5;">Hello <strong>{{firstName}}</strong>,</p>
+                            <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;">Thank you for your payment! Here's your receipt for your recent transaction.</p>
+                        </td>
+                    </tr>
+                    <!-- Details box -->
+                    <tr>
+                        <td style="padding:15px 40px 30px 40px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f5f6f7;border-radius:8px;">
+                                <!-- Payment Details Heading -->
+                                <tr>
+                                    <td style="padding:20px 25px 10px 25px;font-size:16px;color:#253748;font-weight:700;">Payment Details</td>
+                                </tr>
+                                <!-- Transaction ID -->
+                                <tr>
+                                    <td style="padding:12px 25px;font-size:14px;color:#253748;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:140px;font-weight:600;">Transaction ID:</span> {{transactionId}}
+                                    </td>
+                                </tr>
+                                <!-- Date -->
+                                <tr>
+                                    <td style="padding:12px 25px;font-size:14px;color:#253748;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:140px;font-weight:600;">Date:</span> {{paymentDate}}
+                                    </td>
+                                </tr>
+                                <!-- Payment Method -->
+                                <tr>
+                                    <td style="padding:12px 25px;font-size:14px;color:#253748;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:140px;font-weight:600;">Payment Method:</span> {{paymentMethod}}
+                                    </td>
+                                </tr>
+                                <!-- Package -->
+                                <tr>
+                                    <td style="padding:12px 25px;font-size:14px;color:#253748;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:140px;font-weight:600;">Package:</span> {{packageName}}
+                                    </td>
+                                </tr>
+                                <!-- Subtotal -->
+                                <tr>
+                                    <td style="padding:12px 25px;font-size:14px;color:#253748;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:140px;font-weight:600;">Subtotal:</span> {{subtotal}} BHD
+                                    </td>
+                                </tr>
+                                <!-- VAT optional -->
+                                {{#vatAmount}}
+                                <tr>
+                                    <td style="padding:12px 25px;font-size:14px;color:#253748;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:140px;font-weight:600;">VAT ({{vatRate}}%):</span> {{vatAmount}} BHD
+                                    </td>
+                                </tr>
+                                {{/vatAmount}}
+                                <!-- Total Paid row -->
+                                <tr>
+                                    <td style="padding:12px 25px 25px 25px;font-size:16px;color:#253748;font-weight:700;border-top:1px solid #e0e0e0;">
+                                        <span style="display:inline-block;width:140px;">Total Paid:</span> {{totalAmount}} BHD
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Next steps -->
+                    <tr>
+                        <td style="padding:0 40px 40px 40px;">
+                            <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;">Your subscription is now active and your first delivery will arrive on <strong>{{firstDeliveryDate}}</strong>.</p>
+                        </td>
+                    </tr>
+                    <!-- CTA -->
+                    <tr>
+                        <td style="text-align:center;padding:0 40px 40px 40px;">
+                            <a href="{{appUrl}}" style="display:inline-block;background-color:#ffcb05;color:#253748;font-weight:600;text-decoration:none;padding:12px 30px;border-radius:25px;font-size:16px;">View My Account</a>
+                        </td>
+                    </tr>
+                    <!-- Signature -->
+                    <tr>
+                        <td style="padding:0 40px 40px 40px;">
+                            <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;">Keep this receipt for your records.</p>
+                            <p style="font-size:16px;color:#253748;margin:15px 0 0 0;line-height:1.5;">Need help? Contact us at <a href="mailto:{{supportEmail}}" style="color:#253748;text-decoration:underline;">{{supportEmail}}</a></p>
+                            <div style="height:15px;"></div>
+                            <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;"><strong>Portion Team 💙</strong></p>
+                        </td>
+                    </tr>
+                    <!-- Dark footer -->
+                    <tr>
+                        <td style="background-color:#253748;padding:30px 40px;text-align:center;border-radius:0 0 8px 8px;">
+                            <img src="https://raw.githubusercontent.com/portion-team/email-template/main/shared/images/logo.png" alt="Portion Logo" style="height:24px;margin-bottom:20px;">
+                            <br>
+                            <!-- App buttons -->
+                            <a href="{{appStoreLink}}" style="display:inline-block;margin:5px;">
+                                <img src="https://raw.githubusercontent.com/portion-team/email-template/main/shared/images/apple.png" alt="Download on App Store" style="height:40px;border:none;">
+                            </a>
+                            <a href="{{playStoreLink}}" style="display:inline-block;margin:5px;">
+                                <img src="https://raw.githubusercontent.com/portion-team/email-template/main/shared/images/google.png" alt="Get it on Google Play" style="height:40px;border:none;">
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Email prefs -->
+                    <tr>
+                        <td style="padding:20px 40px 40px 40px;text-align:center;font-size:12px;color:#888888;">
+                            To update your email notifications, <a href="{{unsubscribeLink}}" style="color:#007bff;text-decoration:none;">click here</a>.<br>
+                            تفضل الإيميلات توصلك بالعربي؟ <a href="{{arabicLink}}" style="color:#007bff;text-decoration:none;">اضغط هنا</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>

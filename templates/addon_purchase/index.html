@@ -1,34 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Add-on Purchase Confirmation</title>
-  <style>
-    body { font-family: Arial, sans-serif; color: #333; }
-    .container { max-width: 600px; margin: 0 auto; padding: 24px; }
-    h1 { color: #2b6cb0; }
-    .footer { margin-top: 40px; font-size: 12px; color: #777; }
-    .addons { margin: 16px 0; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-on Purchase Successful – Portion</title>
+    <!--[if mso]>
+    <noscript>
+        <xml>
+            <o:OfficeDocumentSettings>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+    </noscript>
+    <![endif]-->
 </head>
-<body>
-  <div class="container">
-    <h1>Thanks for your add-on order, {{firstName}}!</h1>
-
-    <p>We've received payment <strong>#{{transactionId}}</strong> on {{paymentDate}} via {{paymentMethod}}.</p>
-
-    <div class="addons">
-      <h3>Your selected add-ons:</h3>
-      <p>{{addonsList}}</p>
-    </div>
-
-    <p><strong>Total paid: {{totalAmount}} BHD</strong></p>
-
-    <p>You can view or manage your deliveries anytime in the Portion app.</p>
-
-    <p class="footer">
-      Need help? Contact us at <a href="mailto:{{supportEmail}}">{{supportEmail}}</a>.
-    </p>
-  </div>
+<body style="margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background-color:#ffffff;">
+    <!-- Wrapper -->
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff;">
+        <tr>
+            <td align="center" style="padding:30px 0;">
+                <!-- Container -->
+                <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="max-width:600px;background-color:#ffffff;border-radius:8px;">
+                    <!-- Hero / Title -->
+                    <tr>
+                        <td style="padding:0 40px 30px 40px;">
+                            <h1 style="color:#253748;font-size:24px;font-weight:700;margin:0;">Your payment was successful 🙌</h1>
+                        </td>
+                    </tr>
+                    <!-- Greeting -->
+                    <tr>
+                        <td style="padding:0 40px 20px 40px;">
+                            <p style="font-size:16px;color:#253748;margin:0 0 15px 0;line-height:1.5;">Hello <strong>{{firstName}}</strong>,</p>
+                            <p style="font-size:16px;color:#253748;margin:0 0 15px 0;line-height:1.5;">Thank you for your order!</p>
+                            <p style="font-size:16px;color:#253748;margin:0 0 15px 0;line-height:1.5;">The items you purchased will be added to your delivery on <strong>{{deliveryDate}}</strong>.</p>
+                            <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;">Enjoy your meals and have a lovely day! 🧑‍🍳</p>
+                        </td>
+                    </tr>
+                    <!-- Order Details heading -->
+                    <tr>
+                        <td style="padding:10px 40px 0 40px;">
+                            <h2 style="color:#253748;font-size:18px;font-weight:700;margin:0;">Order Details</h2>
+                        </td>
+                    </tr>
+                    <!-- Details box -->
+                    <tr>
+                        <td style="padding:15px 40px 30px 40px;">
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f5f6f7;border-radius:8px;">
+                                <!-- Order number row -->
+                                <tr>
+                                    <td style="padding:20px 25px 10px 25px;font-size:14px;color:#253748;font-weight:600;border-bottom:1px solid #e0e0e0;">Order # {{orderNumber}}</td>
+                                </tr>
+                                <!-- Items list -->
+                                {{#items}}
+                                <tr>
+                                    <td style="padding:15px 25px 0 25px;">
+                                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                            <tr>
+                                                <td style="width:60px;">
+                                                    <img src="{{imageUrl}}" alt="{{itemName}}" style="width:60px;height:60px;border-radius:6px;object-fit:cover;border:1px solid #e0e0e0;">
+                                                </td>
+                                                <td style="font-size:14px;color:#253748;padding-left:15px;">{{itemName}}</td>
+                                                <td style="font-size:14px;color:#253748;text-align:center;white-space:nowrap;">x {{quantity}}</td>
+                                                <td style="font-size:14px;color:#253748;text-align:right;white-space:nowrap;">{{price}} BHD</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                {{/items}}
+                                
+                                <tr>
+                                    <td style="padding:25px 25px 0 25px;">
+                                        <hr style="border:none;border-top:1px solid #e0e0e0;margin:0;">
+                                    </td>
+                                </tr>
+                                <!-- Payment type row -->
+                                <tr>
+                                    <td style="padding:15px 25px;font-size:14px;color:#253748;">
+                                        <span style="display:inline-block;width:120px;font-weight:600;">Payment type:</span> {{paymentType}}
+                                    </td>
+                                </tr>
+                                <!-- Total payment row -->
+                                <tr>
+                                    <td style="padding:0 25px 25px 25px;font-size:14px;color:#253748;">
+                                        <span style="display:inline-block;width:120px;font-weight:600;">Total payment:</span> {{totalAmount}} BHD
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Signature -->
+                    <tr>
+                        <td style="padding:0 40px 40px 40px;">
+                            <p style="font-size:16px;color:#253748;margin:0;line-height:1.5;">Lots of love,<br><strong>Portion Team 💙</strong></p>
+                        </td>
+                    </tr>
+                    <!-- Dark footer -->
+                    <tr>
+                        <td style="background-color:#253748;padding:30px 40px;text-align:center;border-radius:0 0 8px 8px;">
+                            <img src="https://raw.githubusercontent.com/portion-team/email-template/main/shared/images/logo.png" alt="Portion Logo" style="height:24px;margin-bottom:20px;">
+                            <br>
+                            <!-- App buttons -->
+                            <a href="{{appStoreLink}}" style="display:inline-block;margin:5px;">
+                                <img src="https://raw.githubusercontent.com/portion-team/email-template/main/shared/images/apple.png" alt="Download on App Store" style="height:40px;border:none;">
+                            </a>
+                            <a href="{{playStoreLink}}" style="display:inline-block;margin:5px;">
+                                <img src="https://raw.githubusercontent.com/portion-team/email-template/main/shared/images/google.png" alt="Get it on Google Play" style="height:40px;border:none;">
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Email prefs -->
+                    <tr>
+                        <td style="padding:20px 40px 40px 40px;text-align:center;font-size:12px;color:#888888;">
+                            To update your email notifications, <a href="{{unsubscribeLink}}" style="color:#007bff;text-decoration:none;">click here</a>.<br>
+                            تفضل الإيميلات توصلك بالعربي؟ <a href="{{arabicLink}}" style="color:#007bff;text-decoration:none;">اضغط هنا</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
 </html> 
