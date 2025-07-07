@@ -232,6 +232,180 @@
       "active": true,
       "createdAt": "2024-01-15T00:00:00Z",
       "updatedAt": "2024-01-15T00:00:00Z"
+    },
+    {
+      "id": "onboarding_1_hour",
+      "name": "1 Hour After Registration",
+      "description": "Welcome email sent 1 hour after user registration",
+      "category": "onboarding",
+      "version": "1.0.0",
+      "htmlFile": "onboarding_1_hour.html",
+      "variables": [
+        "firstName",
+        "appUrl",
+        "unsubscribeUrl",
+        "arabicUrl"
+      ],
+      "active": true,
+      "createdAt": "2024-07-07T00:00:00Z",
+      "updatedAt": "2024-07-07T00:00:00Z"
+    },
+    {
+      "id": "onboarding_10_minutes",
+      "name": "10 Minutes After Subscription",
+      "description": "Subscription confirmation email sent 10 minutes after successful subscription",
+      "category": "onboarding",
+      "version": "1.0.0",
+      "htmlFile": "onboarding_10_minutes.html",
+      "variables": [
+        "firstName",
+        "packageName",
+        "packageDuration",
+        "deliveryDays",
+        "startDate",
+        "firstDeliveryDate",
+        "appUrl",
+        "unsubscribeUrl",
+        "arabicUrl"
+      ],
+      "active": true,
+      "createdAt": "2024-07-07T00:00:00Z",
+      "updatedAt": "2024-07-07T00:00:00Z"
+    },
+    {
+      "id": "retention_2_days_post_expiry",
+      "name": "2 Days After Subscription Expiry",
+      "description": "Win-back email sent 2 days after subscription expires",
+      "category": "retention",
+      "version": "1.0.0",
+      "htmlFile": "retention_2_days_post_expiry.html",
+      "variables": [
+        "firstName",
+        "expiryDate",
+        "mealsDelivered",
+        "daysActive",
+        "comebackDiscount",
+        "restartUrl",
+        "supportEmail",
+        "unsubscribeUrl",
+        "arabicUrl"
+      ],
+      "active": true,
+      "createdAt": "2024-07-07T00:00:00Z",
+      "updatedAt": "2024-07-07T00:00:00Z"
+    },
+    {
+      "id": "retention_7_days_post_expiry",
+      "name": "7 Days After Subscription Expiry",
+      "description": "Final offer email sent 7 days after subscription expires",
+      "category": "retention",
+      "version": "1.0.0",
+      "htmlFile": "retention_7_days_post_expiry.html",
+      "variables": [
+        "firstName",
+        "restartUrl",
+        "browseUrl",
+        "unsubscribeUrl",
+        "arabicUrl"
+      ],
+      "active": true,
+      "createdAt": "2024-07-07T00:00:00Z",
+      "updatedAt": "2024-07-07T00:00:00Z"
+    },
+    {
+      "id": "retention_10_weeks_post_expiry",
+      "name": "10 Weeks After Subscription Expiry",
+      "description": "Long-term win-back email with special VIP offer",
+      "category": "retention",
+      "version": "1.0.0",
+      "htmlFile": "retention_10_weeks_post_expiry.html",
+      "variables": [
+        "firstName",
+        "restartUrl",
+        "browseUrl",
+        "supportEmail",
+        "unsubscribeUrl",
+        "arabicUrl"
+      ],
+      "active": true,
+      "createdAt": "2024-07-07T00:00:00Z",
+      "updatedAt": "2024-07-07T00:00:00Z"
+    },
+    {
+      "id": "onboarding_2_days",
+      "name": "2 Days After Registration",
+      "description": "Follow-up email for users who registered but haven't subscribed",
+      "category": "onboarding",
+      "version": "1.0.0",
+      "htmlFile": "onboarding_2_days.html",
+      "variables": [
+        "firstName",
+        "subscribeUrl",
+        "browseUrl",
+        "supportEmail",
+        "unsubscribeUrl",
+        "arabicUrl"
+      ],
+      "active": true,
+      "createdAt": "2024-07-07T00:00:00Z",
+      "updatedAt": "2024-07-07T00:00:00Z"
+    },
+    {
+      "id": "retention_14_days_post_expiry",
+      "name": "14 Days After Subscription Expiry",
+      "description": "Mid-term win-back email with enhanced offer",
+      "category": "retention",
+      "version": "1.0.0",
+      "htmlFile": "retention_14_days_post_expiry.html",
+      "variables": [
+        "firstName",
+        "restartUrl",
+        "browseUrl",
+        "supportEmail",
+        "unsubscribeUrl",
+        "arabicUrl"
+      ],
+      "active": true,
+      "createdAt": "2024-07-07T00:00:00Z",
+      "updatedAt": "2024-07-07T00:00:00Z"
+    },
+    {
+      "id": "retention_4_weeks_post_expiry",
+      "name": "4 Weeks After Subscription Expiry",
+      "description": "Extended win-back email with new features and offers",
+      "category": "retention",
+      "version": "1.0.0",
+      "htmlFile": "retention_4_weeks_post_expiry.html",
+      "variables": [
+        "firstName",
+        "restartUrl",
+        "browseUrl",
+        "supportEmail",
+        "unsubscribeUrl",
+        "arabicUrl"
+      ],
+      "active": true,
+      "createdAt": "2024-07-07T00:00:00Z",
+      "updatedAt": "2024-07-07T00:00:00Z"
+    },
+    {
+      "id": "retention_6_weeks_post_expiry",
+      "name": "6 Weeks After Subscription Expiry",
+      "description": "Final VIP offer with maximum urgency and value",
+      "category": "retention",
+      "version": "1.0.0",
+      "htmlFile": "retention_6_weeks_post_expiry.html",
+      "variables": [
+        "firstName",
+        "restartUrl",
+        "browseUrl",
+        "supportEmail",
+        "unsubscribeUrl",
+        "arabicUrl"
+      ],
+      "active": true,
+      "createdAt": "2024-07-07T00:00:00Z",
+      "updatedAt": "2024-07-07T00:00:00Z"
     }
   ]
 }
